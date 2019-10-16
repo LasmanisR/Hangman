@@ -1,14 +1,35 @@
-1.Ko es protu patstâvîgi izdarît ar Raspberry PI ðobrîd:
+1.Ko es protu patstāvīgi izdarīt ar Raspberry PI šobrīd:
 -Protu ieslēgt to
--Protu kontrolet to caur datoru izmantojot programmu PuTTY
--Protu izveidot Python failu ievietot tajâ kodu un palaist to
+-Protu kontrolēt to caur datoru izmantojot programmu PuTTY
+-Protu izveidot Python failu ievietot tajā kodu un palaist to
 -Protu to flashot izmantojot balenaEtcher
 
-2.Ko es neprotu izdarît patstâvîgi ar Raspberry PI ðobrîd:
--Neprotu izmantot tâ "ârçjâs funkcijas", kâ piemçram tâ Pinus, un pârçjâs lietas, kuras tam var pievienot un izmantot.
--Neprotu palaist uz tâ aplikâcijas.
+2.Ko es neprotu izdarīt patstāvīgi ar Raspberry PI šobrîd:
+-Neprotu izmantot tā "ārējās funkcijas", kā piemēram tā Pinus, un pārējās lietas, kuras tam var pievienot un izmantot.
+-Neprotu palaist uz tā aplikācijas.
 
-3.Kas jâòem vçrâ programmçjot Raspberry PI skriptus un ar ko tas atðíiras no arduino programmçðanas
+3.Kas jāņem vērā programmējot Raspberry PI skriptus un ar ko tas atšķiras no arduino programmēšanas
+-Jāievēro atstarpes un simboli lai kods strādātu, bet ja kaut kas nav pareizi var redzēt kur ir kļūda, atšķiras ar to, kad pirmkārt ir dažādas programmēšanas valodas uz Raspberry PI tas ir Python, bet uz Arduino tas ir C++.
 
+4.Kas ir random metode, LISTE, input() funkcija, str un int, metožu definēšana,  exit() funkcija, if/elif/else cikli Raspberry PI programmēšanā.
+*Random metode - Darbība, kad no saraksta tiek random izvilkts vārds/skaitlis vai kas cits.
+*Liste - ir saraksts
+*input() - Ir funkcija ar kuru lietotājs pats var ievadīt jebkādus datus.
+*str un int - str=tekstuālie dati int=skaitliskie dati
+*metožu definēšana - Var definēt koda daļu, lai to varētu izmantot atsevišķi neatkarīgi no pārējā koda.
+*exit() funkcija - Funkcija, kas aizver/aptur kodu.
+*if/elif/else - Funkcijas kuras var izmantot darbības veikšanai, piemēram ja gribi lai izpildas noteikta darbība gadījumā ja X=1 tad var izmantot "if", bet ja gribi lai izpildas cita funkciju gadījumā ja X=2, var izmantot "elif", bet else var izmantot tad, ja piemēram vēlies aizvērt kodu ja 'X' beigās nav ne 1, ne 2.
 
+5.Ko es vēlējios izdarīt, kas sanāca, kas nē, kam tas ir paredzēts?
+-Es vēlējos izveidot karātavu spēli.
+-Sanāca spēle ar vārdiem kuri tiek izvilkti no random listes, kurā skaita dzīvības un kur veidojas zīmējums atkarībā no kļūdu skaita.
+-Nesanāca izveidot līmeņus un punktu ievākšanu.
 
+6.Kādu funkcionalitāti papildus varētu iekļaut, lai uzlabotu manu izstrādāto spēli!
+-Varētu pievienot tos 5 līmeņus.
+-Varētu pievienot punktu savākšanas sistēmu.
+-Varētu pievienot spēlētājus.
+
+7.Kādu novērtējumu esmu pelnījis par savu darbu? Cik daudz patstāvīga laika esmu veltījis projekta izstrādei?
+-Manuprāt esmu pelnījis 6, jo manā spēlē nav nekas tāds īpašs.
+-Sākumā "basic" kodu kur bija tikai karātavas ar dzīvībām atradu internetā, bet pārējo visu kodeju pats ko sapratu, bet to ko nesapratu skatijos no tutorialiem.
