@@ -3,28 +3,28 @@ import string
 import sys
 
 
-def Lives(Incorrect): #Funkcija pasaka cik dzīvības spēlētājam atlikušas
-       LivesLeft = IncorrectLimit - Incorrect
-       print("Tev ir", LivesLeft, "atlikusas dzivibas.")
+def Dzivibas(Nepareizi): #Funkcija pasaka cik dzīvības spēlētājam atlikušas
+       DzivibasAtlikums = KluduLimits - Nepareizi
+       print("Tev ir", DzivibasAtlikums, "atlikusas dzivibas.")
 
-def PicNo(Incorrect): #Šī funkcija veido Hangman bildi, pēc katra gājiena
-       if Incorrect == 1: 
+def BildesNum(Nepareizi): #Šī funkcija veido Hangman bildi, pēc katra gājiena
+       if Nepareizi == 1: 
            print(Bilde1)
-       if Incorrect == 2:
+       if Nepareizi == 2:
            print(Bilde2)
-       if Incorrect == 3:
+       if Nepareizi == 3:
            print(Bilde3)
-       if Incorrect == 4:
+       if Nepareizi == 4:
            print(Bilde4)
-       if Incorrect == 5:
+       if Nepareizi == 5:
            print(Bilde5)
-       if Incorrect == 6:
+       if Nepareizi == 6:
            print(Bilde6)
-       if Incorrect == 7:
+       if Nepareizi == 7:
            print(Bilde7)
 
-def Hint(Incorrect, WordChoice): #Funkcija iedod hintu kad paliek pēdejāš divas dzīvības
-       if Incorrect == 6:
+def Hint(Nepareizi, WordChoice): #Funkcija iedod hintu kad paliek pēdejāš divas dzīvības
+       if Nepareizi == 6:
            WordChoice = list(WordChoice)
            WordHint = random.choice(WordChoice)
            WordChoice = "".join(WordChoice)
@@ -32,7 +32,7 @@ def Hint(Incorrect, WordChoice): #Funkcija iedod hintu kad paliek pēdejāš div
 
 
 List1 = ["tabula","serfosana","anglija","parize","pukes","laptops","smiltis","klase", "blonds", "zvaigzne", "zils", "cepure", "sniegs", "tetris", "gala", "palma","internets","kiegeli", "putns", "megabits", "ckaste", "jezus", "zabaks", "skolotajs", "tablete", "pisotle", "auto", "beigas", "zale", "logs", "zirneklis", "labi", "lol", "bezdibenis", "janoga", "neruna"] #These are all the words that can possibly be taken
-IncorrectLimit = 7 #Spēlētāja dzīvību/kļūdu limits
+KluduLimits = 7 #Spēlētāja dzīvību/kļūdu limits
 Infinity = 9999999999999999999999999999999999 #Loopu daudzums
 Bilde1 = ('''
      +---+
@@ -92,7 +92,7 @@ Bilde7 = ('''
 =========''') #Hangmana attēli
 
 
-Incorrect = 0 
+Nepareizi = 0 
 List2 = [] 
 
 input("Spied \"Enter\" lai saktu speli." + "\n")
@@ -135,13 +135,13 @@ for i in range(Infinity):
            print(L.replace("", " ")[1: -1], "\n")
 
        GuessLists = list(L) 
-       LivesLeft = IncorrectLimit - Incorrect #Skaita atlikušās dzīvības
+       DzivibasAtlikums = KluduLimits - Nepareizi #Skaita atlikušās dzīvības
 
        for i in range(Infinity): 
            if GuessLists == WordChoice:
                break
 
-           Hint(Incorrect, WordChoice) 
+           Hint(Nepareizi, WordChoice) 
 
            for i in range(Infinity): 
                Guess1 = input("Mini burtu: ") #Spēletaja burtu atminējums
@@ -164,11 +164,11 @@ for i in range(Infinity):
                print("Burts", Guess1.upper(), "bija pareizs.") #Ziņa kas pasaka, ka burts bija pareizs
                GuessLists = "".join(GuessLists) 
            else:
-               Incorrect += 1 
+               Nepareizi += 1 
                print("Nepareizi.")
                GuessLists = "".join(GuessLists) 
-               PicNo(Incorrect) 
-               Lives(Incorrect) 
+               BildesNum(Nepareizi) 
+               Dzivibas(Nepareizi) 
 
            List2 = "".join(List2) #
            print("Minētie burti: ",List2.upper()) #Printē spēlētāja minētos burtus
@@ -178,7 +178,7 @@ for i in range(Infinity):
 
            if GuessLists == WordChoice: #Nosaka vai spēlētājs ir uzvarējis 
                print("LOL tu uzminēji? APSVEICU!")
-               Incorrect = 0 
+               Nepareizi = 0 
                List2 = []
                GuessLists = []
                JaunaSpele = input("Gribi spēlēt atkal? [J]ā, [N]ē: \n")
@@ -187,10 +187,10 @@ for i in range(Infinity):
                else:
                    sys.exit()
 
-           if Incorrect == 7: #Nosaka vai spēlētājs ir zaudējis
+           if Nepareizi == 7: #Nosaka vai spēlētājs ir zaudējis
                print("LOL zaudēji.")
                print("Vārds bija: ", WordChoice + ".")
-               Incorrect = 0 
+               Nepareizi = 0 
                List2 = []
                GuessLists = []
                JaunaSpele = input("Gribi spēlēt atkal? [J]ā, [N]ē: \n")
