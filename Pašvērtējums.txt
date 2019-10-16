@@ -1,0 +1,14 @@
+1.Ko es protu patstâvîgi izdarît ar Raspberry PI ðobrîd:
+-Protu ieslçgt to
+-Protu kontrolçt to caur datoru izmantojot programmu PuTTY
+-Protu izveidot Python failu ievietot tajâ kodu un palaist to
+-Protu to flashot izmantojot balenaEtcher
+
+2.Ko es neprotu izdarît patstâvîgi ar Raspberry PI ðobrîd:
+-Neprotu izmantot tâ "ârçjâs funkcijas", kâ piemçram tâ Pinus, un pârçjâs lietas, kuras tam var pievienot un izmantot.
+-Neprotu palaist uz tâ aplikâcijas.
+
+3.Kas jâòem vçrâ programmçjot Raspberry PI skriptus un ar ko tas atðíiras no arduino programmçðanas
+
+
+
